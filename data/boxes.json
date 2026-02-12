@@ -1,30 +1,7 @@
 [
-  {
-    "id": "box1",
-    "title": "Bull or Bear?",
-    "icon": "📈",
-    "type": "game",
-    "description": "Đoán xu hướng line-chart trong 4 round, cần đúng 3/4."
-  },
-  {
-    "id": "box2",
-    "title": "Supply-Demand Snap",
-    "icon": "🧩",
-    "type": "stub",
-    "description": "Placeholder cho mini-game kéo thả cung cầu (sẽ gắn sau)."
-  },
-  {
-    "id": "box3",
-    "title": "Budget Challenge",
-    "icon": "💸",
-    "type": "stub",
-    "description": "Placeholder cho mini-game phân bổ ngân sách (sẽ gắn sau)."
-  },
-  {
-    "id": "box4",
-    "title": "Inflation Basket",
-    "icon": "🛒",
-    "type": "game",
-    "description": "MCQ lạm phát, cần đúng 2 câu liên tiếp (retry thoải mái)."
-  }
+  { "id": "box1", "title": "Bull or Bear", "icon": "📈", "game": "Đoán xu hướng chart", "unlockRule": "Thắng 3/4" },
+  { "id": "box2", "title": "Supply-Demand Snap", "icon": "🧩", "game": "Kéo đúng cung cầu", "unlockRule": "Đúng 2/2" },
+  { "id": "box3", "title": "Budget Challenge", "icon": "💸", "game": "Phân bổ ngân sách", "unlockRule": "Đúng constraints" },
+  { "id": "box4", "title": "Inflation Basket", "icon": "🛒", "game": "MCQ lạm phát", "unlockRule": "Đúng 2 câu liên tiếp" },
+  { "id": "box5", "title": "Auction & Strategy", "icon": "🎯", "game": "Đặt giá chiến lược", "unlockRule": "Thắng 1-2 vòng" }
 ]

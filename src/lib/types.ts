@@ -1,4 +1,4 @@
-export type StepKey = "start" | "gallery" | "xuanay" | "blindBoxes" | "stickers" | "final";
+export type MbtiPreset = "INTJ" | "INTP" | "INFJ" | "INFP";
 
 export interface Track {
   id: string;
@@ -17,13 +17,6 @@ export interface BoxItem {
   id: string;
   title: string;
   icon: string;
-  type: "game" | "stub";
-  description: string;
-}
-
-export interface MessageCard {
-  boxId: string;
-  title: string;
-  detail: string;
-  funFact?: string;
+  game: string;
+  unlockRule: string;
 }

@@ -1,25 +1,5 @@
-[
-  {
-    "boxId": "box1",
-    "title": "Chart không chỉ là đoán mò",
-    "detail": "Trong kinh tế, cùng một xu hướng giá nhưng bối cảnh cung-cầu khác nhau sẽ dẫn tới quyết định khác. Khi nhìn slope + điểm kết thúc, bạn đang luyện tư duy đọc tín hiệu.",
-    "funFact": "Fun fact: Nhiều nhà phân tích dùng moving average để giảm nhiễu trước khi ra quyết định."
-  },
-  {
-    "boxId": "box2",
-    "title": "Cân bằng thị trường",
-    "detail": "Điểm giao nhau của cung và cầu là trạng thái cân bằng. Ở bản demo, box này đang ở chế độ stub nhưng flow unlock vẫn hoạt động để giữ trải nghiệm liền mạch."
-  },
-  {
-    "boxId": "box3",
-    "title": "Ngân sách có ràng buộc",
-    "detail": "Mọi lựa chọn đều có chi phí cơ hội. Box Budget sẽ cho bạn chọn trong giới hạn cố định và so điểm hiệu quả tổng.",
-    "funFact": "Fun fact: 50/30/20 là một rule-of-thumb quản lý ngân sách cá nhân rất phổ biến."
-  },
-  {
-    "boxId": "box4",
-    "title": "Inflation Basket",
-    "detail": "Lạm phát được theo dõi qua rổ hàng hóa đại diện. Việc đúng 2 câu liên tiếp mô phỏng khả năng hiểu bối cảnh chứ không chỉ trả lời may mắn.",
-    "funFact": "Fun fact: CPI thay đổi theo quốc gia vì rổ hàng và trọng số khác nhau."
-  }
-]
+{
+  "box1": ["Bạn mở được manh mối đầu tiên.", "Tiếp tục nhé!"],
+  "box2": ["Ổn áp rồi đó.", "Thêm chút nữa là tới final!"],
+  "final": ["Cảm ơn bạn đã chơi bản demo.", "Final letter sẽ được thay bằng nội dung thật sau."]
+}

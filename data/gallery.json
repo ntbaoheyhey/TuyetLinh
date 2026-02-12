@@ -1,5 +1,4 @@
 [
-  { "id": "p01", "src": "/photos/polaroids/p01.jpg", "caption": "Ảnh polaroid 01 (sample)" },
-  { "id": "p02", "src": "/photos/polaroids/p02.jpg", "caption": "Ảnh polaroid 02 (sample)" },
-  { "id": "p03", "src": "/photos/polaroids/p03.jpg", "caption": "Ảnh polaroid 03 (sample)" }
+  { "id": "p01", "src": "/photos/polaroids/p01.jpg", "caption": "Mảnh ghép #1" },
+  { "id": "p02", "src": "/photos/polaroids/p02.jpg", "caption": "Mảnh ghép #2" }
 ]
