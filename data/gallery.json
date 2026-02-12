@@ -1,4 +1,5 @@
 [
-  { "id": "p01", "src": "/photos/polaroids/p01.jpg", "caption": "Mảnh ghép #1" },
-  { "id": "p02", "src": "/photos/polaroids/p02.jpg", "caption": "Mảnh ghép #2" }
+  { "id": "p01", "src": "/photos/polaroids/p01.jpg", "caption": "Khoảnh khắc đầu tiên của hành trình." },
+  { "id": "p02", "src": "/photos/polaroids/p02.jpg", "caption": "Một ngày bình thường nhưng rất đáng nhớ." },
+  { "id": "p03", "src": "/photos/polaroids/p03.jpg", "caption": "Bức ảnh này luôn làm mình mỉm cười." }
 ]
