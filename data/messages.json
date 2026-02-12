@@ -1,0 +1,5 @@
+{
+  "box1": ["Bạn mở được manh mối đầu tiên.", "Tiếp tục nhé!"],
+  "box2": ["Ổn áp rồi đó.", "Thêm chút nữa là tới final!"],
+  "final": ["Cảm ơn bạn đã chơi bản demo.", "Final letter sẽ được thay bằng nội dung thật sau."]
+}

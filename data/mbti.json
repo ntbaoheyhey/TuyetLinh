@@ -1,0 +1,6 @@
+{
+  "INTJ": { "tone": "Gọn, sắc, logic.", "emoji": "🧠", "difficulty": "normal" },
+  "INTP": { "tone": "Playful + thông minh.", "emoji": "🛠️", "difficulty": "easy" },
+  "INFJ": { "tone": "Tĩnh, sâu, dịu.", "emoji": "🌙", "difficulty": "normal" },
+  "INFP": { "tone": "Mơ mộng, ấm áp.", "emoji": "🌸", "difficulty": "easy" }
+}
