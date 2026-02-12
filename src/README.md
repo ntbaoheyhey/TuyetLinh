@@ -1,9 +1,3 @@
-# Cấu trúc thư mục web quà tặng
+# Source folder
 
-- `assets/css`: chứa file style.
-- `assets/js`: chứa file JavaScript.
-- `assets/images`: chứa ảnh kỷ niệm, banner, avatar.
-- `assets/audio`: chứa nhạc nền/lời nhắn giọng nói.
-- `assets/fonts`: chứa font tuỳ chỉnh.
-- `components`: chứa các thành phần UI tái sử dụng.
-- `pages`: chứa các trang riêng (ví dụ: home, timeline, lời chúc).
+Chi tiết setup và mô tả triển khai nằm tại `README.md` ở root repo.

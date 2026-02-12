@@ -1,0 +1,4 @@
+[
+  { "id": "track-01", "title": "Morning Petals", "file": "/music/track01.mp3", "artist": "Demo Artist" },
+  { "id": "track-02", "title": "Soft Breeze", "file": "/music/track02.mp3", "artist": "Demo Artist" }
+]
