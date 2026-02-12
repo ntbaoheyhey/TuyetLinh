@@ -1,70 +1,73 @@
-# Economics Blind Box Demo (Balanced v2.1 - Option A)
+# Economics Blind Box Gift Website (Balanced Mode)
 
-Demo website theo flow thống nhất (không MBTI):
+Next.js App Router demo theo spec `docs/spec.md`, triển khai một trải nghiệm thống nhất (không MBTI selector, không personality tách riêng).
 
-`Start → Gallery → Xưa/Nay → Blind Boxes → Sticker Album → Final Letter`
-
-## 1) Setup & Run
+## Setup / Run / Build
 
 ```bash
 npm install
 npm run dev
 ```
 
-Mở trình duyệt tại `http://localhost:3000`.
-
-## 2) Build
+Open: `http://localhost:3000`
 
 ```bash
 npm run build
 npm run start
 ```
 
-## 3) Cấu trúc chính
+## Project structure
 
 - `src/app/`
-  - `layout.tsx`: layout + metadata
-  - `page.tsx`: render demo shell
-  - `globals.css`: theme pastel + lily style + animation
-- `src/components/demo-shell.tsx`: toàn bộ flow và state
-- `src/lib/types.ts`: kiểu dữ liệu dùng chung
+  - `layout.tsx`: metadata + root layout
+  - `page.tsx`: entry page
+  - `globals.css`: Tailwind base
+- `src/components/demo-shell.tsx`: toàn bộ flow UI + mini-games + localStorage/audio logic
+- `src/lib/types.ts`: shared TypeScript types
 - `data/`
-  - `playlist.json`: sample music list
-  - `gallery.json`: sample polaroid list
-  - `boxes.json`: box config (box1,2,3,4)
-  - `messages.json`: balanced message cards `{ boxId, title, detail, funFact? }`
-- `public/music`, `public/photos/polaroids`, `public/photos/pairs`, `public/photos/rewards`: nơi đặt assets thật
+  - `playlist.json`: danh sách nhạc cho `<audio>`
+  - `gallery.json`: dữ liệu ảnh polaroid
+  - `boxes.json`: metadata blind boxes
+  - `messages.json`: message card layered `{ boxId, title, detail, funFact? }`
+- `public/`
+  - `music/`
+  - `photos/polaroids/`
+  - `photos/pairs/`
+  - `photos/rewards/`
 
-## 4) Trạng thái triển khai
+## Implemented
 
-### Implemented
-- Unified Balanced experience (không selector MBTI, không personality MBTI).
-- LocalStorage keys:
+- ✅ Unified Balanced mode copywriting (clear + warm + playful vừa đủ, emoji tối giản).
+- ✅ Full flow: `Start → Gallery → Xưa/Nay → Blind Boxes → Sticker Album → Final Letter`.
+- ✅ Tailwind CSS UI + Framer Motion transitions / micro-interactions.
+- ✅ Audio via HTML `<audio>` + `data/playlist.json`.
+  - chỉ phát sau click **Open Gift** (để tránh autoplay restrictions).
+- ✅ localStorage persistence:
   - `openedBoxes: string[]`
   - `stickers: number`
   - `musicIndex?: number`
   - `soundOn?: boolean`
-- Migration nhẹ: nếu key legacy `mbtiPreset` tồn tại thì tự cleanup.
-- End-to-end flow điều hướng được theo thứ tự spec.
-- Box 1 (Bull or Bear?) đầy đủ:
-  - line chart SVG có animated draw
-  - chọn Up/Down
-  - điều kiện thắng đúng 3/4
-  - 1 hint/box với 2 style hint (logic / gentle)
-- Box 4 (Inflation Basket) đầy đủ:
-  - câu hỏi MCQ
-  - đúng 2 câu liên tiếp để thắng, cho phép retry
-- Box 2 & Box 3 đang là stub nhưng đã có state locked/available/completed và hook vào unlock flow.
-- Message cards dạng layered: title + expand/collapse detail + funFact optional.
+  - không dùng và có cleanup `mbtiPreset`
+- ✅ Box 1 fully implemented:
+  - SVG line chart 8 điểm, animated draw
+  - đoán Up/Down
+  - thắng khi đúng 3/4
+  - 1 hint/box với 2 kiểu: logic + gentle
+  - retry nhẹ 1 lần
+- ✅ Box 4 fully implemented:
+  - MCQ inflation basket
+  - thắng khi đúng 2 câu liên tiếp
+  - retry nhẹ
+- ✅ Box 2, Box 3 (và box 5 optional) đang là stub UI nhưng có state `locked/available/completed` đầy đủ.
+- ✅ Sticker Album + unlock Final Letter theo số sticker.
 
-### Stubbed / TODO
-- Audio playback thực tế (hiện đang demo danh sách track + trạng thái sound/index).
-- Gallery ảnh thật, cặp ảnh xưa-nay thật.
-- Mini-game chi tiết cho Box 2 và Box 3.
-- Nội dung Final Letter thật + reward image reveal.
+## Stubbed / not yet production
 
-## 5) Assumptions
+- Ảnh thật và file nhạc thật chưa có (đang là sample paths).
+- Box 2, Box 3, Box 5 gameplay kinh tế thực tế chưa triển khai.
+- Lightbox gallery / before-after slider nâng cao chưa thêm.
 
-- JSON sample dùng để chạy demo không phụ thuộc assets thật.
-- Unlock mẫu theo tuần tự box trong `data/boxes.json`.
-- Box 5 là optional nên chưa bật trong bản này.
+## Assumptions
+
+- Demo tập trung Phase 1–2 theo spec, giữ Box 5 là optional.
+- Unlock theo thứ tự box (box trước mở thì box sau available).
