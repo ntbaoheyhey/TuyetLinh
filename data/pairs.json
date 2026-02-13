@@ -1,0 +1,5 @@
+[
+  { "id": "001", "thenSrc": "/photos/pairs/001_then.jpg", "nowSrc": "/photos/pairs/001_now.jpg", "title": "First chapter" },
+  { "id": "002", "thenSrc": "/photos/pairs/002_then.jpg", "nowSrc": "/photos/pairs/002_now.jpg", "title": "Growing together" },
+  { "id": "003", "thenSrc": "/photos/pairs/003_then.jpg", "nowSrc": "/photos/pairs/003_now.jpg", "title": "Today and beyond" }
+]

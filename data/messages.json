@@ -1,5 +1,52 @@
-{
-  "box1": ["Bạn mở được manh mối đầu tiên.", "Tiếp tục nhé!"],
-  "box2": ["Ổn áp rồi đó.", "Thêm chút nữa là tới final!"],
-  "final": ["Cảm ơn bạn đã chơi bản demo.", "Final letter sẽ được thay bằng nội dung thật sau."]
-}
+[
+  {
+    "boxId": "box1",
+    "title": "You read the chart with calm focus.",
+    "detail": [
+      "You did not rush and still found the key direction.",
+      "That steady rhythm is your strength."
+    ],
+    "funFact": "Strong traders usually prioritize discipline over impulse."
+  },
+  {
+    "boxId": "box2",
+    "title": "You unlocked the next piece.",
+    "detail": [
+      "This box is in demo mode, but your progress is still recorded."
+    ]
+  },
+  {
+    "boxId": "box3",
+    "title": "Your budget strategy is ready.",
+    "detail": [
+      "This box is currently a placeholder to keep the full flow working.",
+      "A later version can include timer and tighter constraints."
+    ]
+  },
+  {
+    "boxId": "box4",
+    "title": "You handled inflation clearly.",
+    "detail": [
+      "Two correct answers in a row shows both memory and composure.",
+      "Small wins like this build solid confidence."
+    ],
+    "funFact": "Inflation is commonly tracked with CPI using a representative basket."
+  },
+  {
+    "boxId": "box5",
+    "title": "Bonus box unlocked a tiny surprise.",
+    "detail": [
+      "Box 5 is optional and useful for extending the demo.",
+      "You can keep it or disable it in production."
+    ]
+  },
+  {
+    "boxId": "final",
+    "title": "Thank you for completing this journey.",
+    "detail": [
+      "From photos to music to each mini game, everything was made with care.",
+      "Wishing you clarity and calm in every choice ahead."
+    ],
+    "funFact": "You have completed the Economics Blind Box experience in Balanced mode."
+  }
+]
