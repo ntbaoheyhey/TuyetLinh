@@ -1,4 +1,146 @@
 [
-  { "id": "p01", "src": "/photos/polaroids/p01.jpg", "caption": "Mảnh ghép #1" },
-  { "id": "p02", "src": "/photos/polaroids/p02.jpg", "caption": "Mảnh ghép #2" }
+  {
+    "month": 1,
+    "title": "January",
+    "layout": "A",
+    "items": [
+      { "src": "/photos/polaroids/p01.jpg", "note": "Small beginnings matter.", "notePlacement": "top" },
+      { "src": "/photos/polaroids/p02.jpg", "note": "A bright morning.", "notePlacement": "right" },
+      { "src": "/photos/polaroids/p03.jpg", "note": "Soft and steady.", "notePlacement": "bottom" },
+      { "src": "/photos/polaroids/p01.jpg", "note": "Warm tea break.", "notePlacement": "left" },
+      { "src": "/photos/polaroids/p02.jpg", "note": "Quiet happiness.", "notePlacement": "top" }
+    ]
+  },
+  {
+    "month": 2,
+    "title": "February",
+    "layout": "B",
+    "items": [
+      { "src": "/photos/polaroids/p02.jpg", "note": "Light rain day.", "notePlacement": "left" },
+      { "src": "/photos/polaroids/p03.jpg", "note": "City glow.", "notePlacement": "bottom" },
+      { "src": "/photos/polaroids/p01.jpg", "note": "One clear thought.", "notePlacement": "top" },
+      { "src": "/photos/polaroids/p02.jpg", "note": "A kind message.", "notePlacement": "right" },
+      { "src": "/photos/polaroids/p03.jpg", "note": "Slow weekend.", "notePlacement": "bottom" }
+    ]
+  },
+  {
+    "month": 3,
+    "title": "March",
+    "layout": "C",
+    "items": [
+      { "src": "/photos/polaroids/p03.jpg", "note": "Fresh air walk.", "notePlacement": "top" },
+      { "src": "/photos/polaroids/p01.jpg", "note": "A tiny win.", "notePlacement": "right" },
+      { "src": "/photos/polaroids/p02.jpg", "note": "Sunlight on desk.", "notePlacement": "left" },
+      { "src": "/photos/polaroids/p03.jpg", "note": "Simple joy.", "notePlacement": "bottom" },
+      { "src": "/photos/polaroids/p01.jpg", "note": "Keep going.", "notePlacement": "top" }
+    ]
+  },
+  {
+    "month": 4,
+    "title": "April",
+    "layout": "D",
+    "items": [
+      { "src": "/photos/polaroids/p01.jpg", "note": "Spring color.", "notePlacement": "left" },
+      { "src": "/photos/polaroids/p02.jpg", "note": "Gentle focus.", "notePlacement": "right" },
+      { "src": "/photos/polaroids/p03.jpg", "note": "New rhythm.", "notePlacement": "bottom" },
+      { "src": "/photos/polaroids/p01.jpg", "note": "A clear plan.", "notePlacement": "top" },
+      { "src": "/photos/polaroids/p02.jpg", "note": "Afternoon calm.", "notePlacement": "right" }
+    ]
+  },
+  {
+    "month": 5,
+    "title": "May",
+    "layout": "E",
+    "items": [
+      { "src": "/photos/polaroids/p02.jpg", "note": "Green season.", "notePlacement": "top" },
+      { "src": "/photos/polaroids/p03.jpg", "note": "Gentle pace.", "notePlacement": "left" },
+      { "src": "/photos/polaroids/p01.jpg", "note": "Clear sky.", "notePlacement": "bottom" },
+      { "src": "/photos/polaroids/p02.jpg", "note": "Coffee notes.", "notePlacement": "right" },
+      { "src": "/photos/polaroids/p03.jpg", "note": "Quiet smile.", "notePlacement": "top" }
+    ]
+  },
+  {
+    "month": 6,
+    "title": "June",
+    "layout": "F",
+    "items": [
+      { "src": "/photos/polaroids/p03.jpg", "note": "Half-year checkpoint.", "notePlacement": "top" },
+      { "src": "/photos/polaroids/p01.jpg", "note": "Still grounded.", "notePlacement": "right" },
+      { "src": "/photos/polaroids/p02.jpg", "note": "Soft sunset.", "notePlacement": "left" },
+      { "src": "/photos/polaroids/p03.jpg", "note": "Tiny celebration.", "notePlacement": "bottom" },
+      { "src": "/photos/polaroids/p01.jpg", "note": "Keep it simple.", "notePlacement": "top" }
+    ]
+  },
+  {
+    "month": 7,
+    "title": "July",
+    "layout": "G",
+    "items": [
+      { "src": "/photos/polaroids/p01.jpg", "note": "Summer light.", "notePlacement": "left" },
+      { "src": "/photos/polaroids/p02.jpg", "note": "Weekend laugh.", "notePlacement": "bottom" },
+      { "src": "/photos/polaroids/p03.jpg", "note": "Rest day.", "notePlacement": "top" },
+      { "src": "/photos/polaroids/p01.jpg", "note": "Street colors.", "notePlacement": "right" },
+      { "src": "/photos/polaroids/p02.jpg", "note": "Small adventure.", "notePlacement": "top" }
+    ]
+  },
+  {
+    "month": 8,
+    "title": "August",
+    "layout": "H",
+    "items": [
+      { "src": "/photos/polaroids/p02.jpg", "note": "Rainy evening.", "notePlacement": "right" },
+      { "src": "/photos/polaroids/p03.jpg", "note": "Notebook page.", "notePlacement": "left" },
+      { "src": "/photos/polaroids/p01.jpg", "note": "Simple meal.", "notePlacement": "bottom" },
+      { "src": "/photos/polaroids/p02.jpg", "note": "Long call.", "notePlacement": "top" },
+      { "src": "/photos/polaroids/p03.jpg", "note": "Night walk.", "notePlacement": "right" }
+    ]
+  },
+  {
+    "month": 9,
+    "title": "September",
+    "layout": "I",
+    "items": [
+      { "src": "/photos/polaroids/p03.jpg", "note": "Back to routine.", "notePlacement": "top" },
+      { "src": "/photos/polaroids/p01.jpg", "note": "Clear desk.", "notePlacement": "left" },
+      { "src": "/photos/polaroids/p02.jpg", "note": "Focused hour.", "notePlacement": "right" },
+      { "src": "/photos/polaroids/p03.jpg", "note": "Warm lamp.", "notePlacement": "bottom" },
+      { "src": "/photos/polaroids/p01.jpg", "note": "Good momentum.", "notePlacement": "top" }
+    ]
+  },
+  {
+    "month": 10,
+    "title": "October",
+    "layout": "J",
+    "items": [
+      { "src": "/photos/polaroids/p01.jpg", "note": "Golden leaves.", "notePlacement": "top" },
+      { "src": "/photos/polaroids/p02.jpg", "note": "Cool breeze.", "notePlacement": "right" },
+      { "src": "/photos/polaroids/p03.jpg", "note": "Long reading.", "notePlacement": "left" },
+      { "src": "/photos/polaroids/p01.jpg", "note": "Cozy cafe.", "notePlacement": "bottom" },
+      { "src": "/photos/polaroids/p02.jpg", "note": "Autumn mood.", "notePlacement": "top" }
+    ]
+  },
+  {
+    "month": 11,
+    "title": "November",
+    "layout": "K",
+    "items": [
+      { "src": "/photos/polaroids/p02.jpg", "note": "Warm scarf day.", "notePlacement": "left" },
+      { "src": "/photos/polaroids/p03.jpg", "note": "Slow sunset.", "notePlacement": "bottom" },
+      { "src": "/photos/polaroids/p01.jpg", "note": "Calm planning.", "notePlacement": "right" },
+      { "src": "/photos/polaroids/p02.jpg", "note": "Kitchen light.", "notePlacement": "top" },
+      { "src": "/photos/polaroids/p03.jpg", "note": "Gentle ending.", "notePlacement": "left" }
+    ]
+  },
+  {
+    "month": 12,
+    "title": "December",
+    "layout": "L",
+    "items": [
+      { "src": "/photos/polaroids/p03.jpg", "note": "Year-end reflection.", "notePlacement": "top" },
+      { "src": "/photos/polaroids/p01.jpg", "note": "Thankful moments.", "notePlacement": "right" },
+      { "src": "/photos/polaroids/p02.jpg", "note": "Warm lights.", "notePlacement": "left" },
+      { "src": "/photos/polaroids/p03.jpg", "note": "Final smile.", "notePlacement": "bottom" },
+      { "src": "/photos/polaroids/p01.jpg", "note": "See you soon.", "notePlacement": "top" }
+    ]
+  }
 ]
