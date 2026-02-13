@@ -1,5 +1,3 @@
-export type MbtiPreset = "INTJ" | "INTP" | "INFJ" | "INFP";
-
 export interface Track {
   id: string;
   title: string;
@@ -7,10 +5,22 @@ export interface Track {
   artist: string;
 }
 
-export interface GalleryItem {
-  id: string;
+export interface GalleryMonthItem {
   src: string;
-  caption: string;
+  caption?: string;
+}
+
+export interface GalleryMonth {
+  month: number;
+  title: string;
+  items: GalleryMonthItem[];
+}
+
+export interface ThenNowPair {
+  id: string;
+  thenSrc: string;
+  nowSrc: string;
+  title?: string;
 }
 
 export interface BoxItem {
@@ -19,4 +29,11 @@ export interface BoxItem {
   icon: string;
   game: string;
   unlockRule: string;
+}
+
+export interface MessageCard {
+  boxId: string;
+  title: string;
+  detail?: string[];
+  funFact?: string;
 }
