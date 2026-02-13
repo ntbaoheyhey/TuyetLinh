@@ -1,73 +1,36 @@
 # Economics Blind Box Gift Website (Balanced Mode)
 
-Next.js App Router demo theo spec `docs/spec.md`, triển khai một trải nghiệm thống nhất (không MBTI selector, không personality tách riêng).
-
-## Setup / Run / Build
+## Run
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open: `http://localhost:3000`
+## New route flow
 
-```bash
-npm run build
-npm run start
-```
+- `/` opening (Open Gift)
+- `/gallery`
+- `/then-now`
+- `/boxes`
+- `/boxes/1` ... `/boxes/5`
+- `/album`
+- `/final` (locked until all 5 completed)
 
-## Project structure
+## What was changed (minimal refactor)
 
-- `src/app/`
-  - `layout.tsx`: metadata + root layout
-  - `page.tsx`: entry page
-  - `globals.css`: Tailwind base
-- `src/components/demo-shell.tsx`: toàn bộ flow UI + mini-games + localStorage/audio logic
-- `src/lib/types.ts`: shared TypeScript types
-- `data/`
-  - `playlist.json`: danh sách nhạc cho `<audio>`
-  - `gallery.json`: dữ liệu ảnh polaroid
-  - `boxes.json`: metadata blind boxes
-  - `messages.json`: message card layered `{ boxId, title, detail, funFact? }`
-- `public/`
-  - `music/`
-  - `photos/polaroids/`
-  - `photos/pairs/`
-  - `photos/rewards/`
+- Reused existing data JSON (`playlist`, `gallery`, `boxes`, `messages`) and existing game logic for Box 1 + Box 4.
+- Split old long single-page flow into App Router pages above.
+- Added small global app provider (`src/components/app-provider.tsx`) to persist:
+  - `completedBoxes`
+  - `earnedBadges`
+  - `musicIndex`
+  - `soundOn`
+  - `giftStarted`
+- Added global audio player in layout/provider so music persists across page transitions and still starts only after clicking **Open Gift**.
+- Added Box hub completion visuals + immediate badge/sticker display and Reset button when all 5 completed.
+- Added route transition animation (fade + slight slide + subtle blur) and opening sparkle/glow via CSS.
 
-## Implemented
+## Stubbed
 
-- ✅ Unified Balanced mode copywriting (clear + warm + playful vừa đủ, emoji tối giản).
-- ✅ Full flow: `Start → Gallery → Xưa/Nay → Blind Boxes → Sticker Album → Final Letter`.
-- ✅ Tailwind CSS UI + Framer Motion transitions / micro-interactions.
-- ✅ Audio via HTML `<audio>` + `data/playlist.json`.
-  - chỉ phát sau click **Open Gift** (để tránh autoplay restrictions).
-- ✅ localStorage persistence:
-  - `openedBoxes: string[]`
-  - `stickers: number`
-  - `musicIndex?: number`
-  - `soundOn?: boolean`
-  - không dùng và có cleanup `mbtiPreset`
-- ✅ Box 1 fully implemented:
-  - SVG line chart 8 điểm, animated draw
-  - đoán Up/Down
-  - thắng khi đúng 3/4
-  - 1 hint/box với 2 kiểu: logic + gentle
-  - retry nhẹ 1 lần
-- ✅ Box 4 fully implemented:
-  - MCQ inflation basket
-  - thắng khi đúng 2 câu liên tiếp
-  - retry nhẹ
-- ✅ Box 2, Box 3 (và box 5 optional) đang là stub UI nhưng có state `locked/available/completed` đầy đủ.
-- ✅ Sticker Album + unlock Final Letter theo số sticker.
-
-## Stubbed / not yet production
-
-- Ảnh thật và file nhạc thật chưa có (đang là sample paths).
-- Box 2, Box 3, Box 5 gameplay kinh tế thực tế chưa triển khai.
-- Lightbox gallery / before-after slider nâng cao chưa thêm.
-
-## Assumptions
-
-- Demo tập trung Phase 1–2 theo spec, giữ Box 5 là optional.
-- Unlock theo thứ tự box (box trước mở thì box sau available).
+- Box 2, 3, 5 are still placeholders but preserve locked/available/completed behavior.

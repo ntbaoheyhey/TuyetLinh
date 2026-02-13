@@ -25,3 +25,8 @@ export interface MessageCard {
   detail?: string[];
   funFact?: string;
 }
+
+export interface ProgressState {
+  completedBoxes: string[];
+  earnedBadges: string[];
+}
