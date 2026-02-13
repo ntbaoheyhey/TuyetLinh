@@ -1,7 +1,7 @@
 [
-  { "id": "box1", "title": "Bull or Bear?", "icon": "📈", "game": "Đoán xu hướng chart", "unlockRule": "Đúng 3/4 dự đoán" },
-  { "id": "box2", "title": "Supply-Demand Snap", "icon": "🧩", "game": "Mini game kéo cung cầu (stub)", "unlockRule": "Sẵn sàng sau khi mở Box 1" },
-  { "id": "box3", "title": "Budget Challenge", "icon": "💸", "game": "Phân bổ ngân sách (stub)", "unlockRule": "Sẵn sàng sau khi mở Box 2" },
-  { "id": "box4", "title": "Inflation Basket", "icon": "🛒", "game": "MCQ lạm phát", "unlockRule": "Đúng 2 câu liên tiếp" },
-  { "id": "box5", "title": "Auction & Strategy", "icon": "🎯", "game": "Bonus box (optional)", "unlockRule": "Mở khi hoàn thành Box 4" }
+  { "id": "box1", "title": "Bull or Bear?", "icon": "📈", "game": "Predict chart direction", "unlockRule": "Get 3 out of 4 correct" },
+  { "id": "box2", "title": "Supply-Demand Snap", "icon": "🧩", "game": "Supply-demand mini game (stub)", "unlockRule": "Available after Box 1" },
+  { "id": "box3", "title": "Budget Challenge", "icon": "💸", "game": "Budget allocation mini game (stub)", "unlockRule": "Available after Box 2" },
+  { "id": "box4", "title": "Inflation Basket", "icon": "🛒", "game": "Inflation MCQ", "unlockRule": "Get 2 correct in a row" },
+  { "id": "box5", "title": "Auction & Strategy", "icon": "🎯", "game": "Bonus box (optional)", "unlockRule": "Available after Box 4" }
 ]

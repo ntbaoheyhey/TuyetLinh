@@ -9,10 +9,11 @@ export default function OpeningPage() {
   const { openGift, started } = useAppState();
 
   return (
-    <PageFrame title="Economics Blind Box Gift" nextHref={started ? "/gallery" : undefined} backHref="/">
+    <PageFrame nextHref={started ? "/gallery" : undefined} backHref="/">
       <div className="opening">
         <p className="sparkle">✧</p>
-        <p>Một hành trình nhỏ: rõ ràng, ấm áp, vui vừa đủ.</p>
+        <h1>Economics Blind Box Gift</h1>
+        <p>A warm and playful journey in one balanced flow.</p>
         <button
           className="btn btn-primary glow"
           onClick={() => {

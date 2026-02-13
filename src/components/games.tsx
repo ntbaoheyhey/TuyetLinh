@@ -79,7 +79,7 @@ export function Box1Game({ onDone }: { onDone: () => void }) {
 
   return (
     <div>
-      <p>Đoán xu hướng tăng/giảm. Cần đúng 3/4. Retry nhẹ 1 lần.</p>
+      <p>Predict up or down. You need 3/4 correct. One gentle retry is allowed.</p>
       <p>Round {roundIndex + 1}/4 • Correct: {correct}</p>
       <svg viewBox="0 0 320 160" className="chart">
         <path d={path} className="chart-line" />
@@ -93,10 +93,10 @@ export function Box1Game({ onDone }: { onDone: () => void }) {
         <div className="hint-box">
           <button className="btn" onClick={() => setHintMode("logic")}>Logic hint</button>
           <button className="btn" onClick={() => setHintMode("gentle")}>Gentle hint</button>
-          <p>{hintMode === "logic" ? "Nhìn 2 điểm cuối để ưu tiên hướng." : "Bạn làm ổn rồi, nhìn xu hướng tổng thể nhé."}</p>
+          <p>{hintMode === "logic" ? "Look at the last two points to prioritize direction." : "You are doing well. Focus on the overall trend."}</p>
         </div>
       )}
-      <button className="btn btn-primary" onClick={next} disabled={!answered}>Tiếp tục</button>
+      <button className="btn btn-primary" onClick={next} disabled={!answered}>Continue</button>
     </div>
   );
 }
@@ -112,12 +112,12 @@ export function Box4Game({ onDone }: { onDone: () => void }) {
     if (option === q.answer) {
       const nextStreak = streak + 1;
       setStreak(nextStreak);
-      setFeedback("Đúng rồi.");
+      setFeedback("Correct.");
       if (nextStreak >= 2) return onDone();
       setIndex((prev) => prev + 1);
       return;
     }
-    setFeedback("Sai nhẹ, thử lại nhé.");
+    setFeedback("Not this one, try again.");
     setStreak(0);
     if (tries < 1) {
       setTries((prev) => prev + 1);
@@ -127,7 +127,7 @@ export function Box4Game({ onDone }: { onDone: () => void }) {
 
   return (
     <div>
-      <p>Giỏ hàng từ {q.basketThen} lên {q.basketNow}. Lạm phát gần đúng?</p>
+      <p>Basket moves from {q.basketThen} to {q.basketNow}. What is the closest inflation rate?</p>
       <div className="row">
         {q.options.map((opt) => (
           <button key={opt} className="btn" onClick={() => choose(opt)}>{opt}</button>
@@ -142,7 +142,7 @@ export function Box4Game({ onDone }: { onDone: () => void }) {
 export function StubGame({ title, onDone }: { title: string; onDone: () => void }) {
   return (
     <div>
-      <p>{title} hiện là placeholder. Trạng thái hoàn thành vẫn được ghi nhận đúng flow.</p>
+      <p>{title} is currently a placeholder. Completion state still works in the main flow.</p>
       <button className="btn btn-primary" onClick={onDone}>Complete stub</button>
     </div>
   );

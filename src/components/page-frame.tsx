@@ -3,15 +3,13 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
-const steps = ["/", "/gallery", "/then-now", "/boxes", "/album", "/final"];
+const steps = ["/", "/gallery", "/then-now", "/boxes", "/final", "/feedback", "/outro"];
 
 export default function PageFrame({
-  title,
   children,
   nextHref,
   backHref,
 }: {
-  title: string;
   children: React.ReactNode;
   nextHref?: string;
   backHref?: string;
@@ -23,16 +21,15 @@ export default function PageFrame({
 
   return (
     <main className="shell">
-      <header className="card">
-        <h1>{title}</h1>
-        <div className="progress-row">
-          <span>Step {index + 1}/{steps.length}</span>
-          <div className="progress-track">
-            <div className="progress-fill" style={{ width: `${((index + 1) / steps.length) * 100}%` }} />
-          </div>
+      <header className="compact-header">
+        <span className="step-label">Step {index + 1}/{steps.length}</span>
+        <div className="progress-track compact">
+          <div className="progress-fill" style={{ width: `${((index + 1) / steps.length) * 100}%` }} />
         </div>
       </header>
-      <section className="card">{children}</section>
+
+      <section className="content-panel">{children}</section>
+
       <footer className="nav-row">
         {backHref ? (
           <Link className="btn" href={backHref}>

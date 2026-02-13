@@ -1,52 +1,52 @@
 [
   {
     "boxId": "box1",
-    "title": "Bạn đọc chart bình tĩnh và chắc tay.",
+    "title": "You read the chart with calm focus.",
     "detail": [
-      "Không cần đoán nhanh, chỉ cần quan sát đúng điểm mấu chốt.",
-      "Bạn đã giữ nhịp rất đều qua từng lượt."
+      "You did not rush and still found the key direction.",
+      "That steady rhythm is your strength."
     ],
-    "funFact": "Trader giỏi thường ưu tiên kỷ luật hơn là cảm tính."
+    "funFact": "Strong traders usually prioritize discipline over impulse."
   },
   {
     "boxId": "box2",
-    "title": "Bạn đã mở khóa mảnh ghép tiếp theo.",
+    "title": "You unlocked the next piece.",
     "detail": [
-      "Box này đang ở chế độ demo, nhưng tiến trình vẫn được ghi nhận."
+      "This box is in demo mode, but your progress is still recorded."
     ]
   },
   {
     "boxId": "box3",
-    "title": "Chiến lược ngân sách đã sẵn sàng.",
+    "title": "Your budget strategy is ready.",
     "detail": [
-      "Hiện tại là bản placeholder để bạn xem đầy đủ flow.",
-      "Phiên bản sau có thể thêm đồng hồ và ràng buộc chi tiết."
+      "This box is currently a placeholder to keep the full flow working.",
+      "A later version can include timer and tighter constraints."
     ]
   },
   {
     "boxId": "box4",
-    "title": "Bạn xử lý lạm phát rất gọn gàng.",
+    "title": "You handled inflation clearly.",
     "detail": [
-      "Hai câu đúng liên tiếp cho thấy bạn vừa nhớ công thức vừa tỉnh táo.",
-      "Đây là kiểu tiến bộ nhỏ nhưng đáng tự hào."
+      "Two correct answers in a row shows both memory and composure.",
+      "Small wins like this build solid confidence."
     ],
-    "funFact": "Lạm phát thường được đo bằng CPI qua một rổ hàng hóa tiêu biểu."
+    "funFact": "Inflation is commonly tracked with CPI using a representative basket."
   },
   {
     "boxId": "box5",
-    "title": "Bonus box mở ra một bất ngờ nho nhỏ.",
+    "title": "Bonus box unlocked a tiny surprise.",
     "detail": [
-      "Box 5 là tuỳ chọn để thêm chiều sâu cho bản demo.",
-      "Bạn có thể giữ hoặc tắt trong bản production."
+      "Box 5 is optional and useful for extending the demo.",
+      "You can keep it or disable it in production."
     ]
   },
   {
     "boxId": "final",
-    "title": "Cảm ơn bạn đã đi hết hành trình này.",
+    "title": "Thank you for completing this journey.",
     "detail": [
-      "Từ ảnh, nhạc đến từng game nhỏ, mọi thứ đều hướng về một lời chúc ấm áp.",
-      "Mong bạn luôn đủ bình tĩnh để chọn điều phù hợp với mình."
+      "From photos to music to each mini game, everything was made with care.",
+      "Wishing you clarity and calm in every choice ahead."
     ],
-    "funFact": "Bạn vừa hoàn thành trải nghiệm Economics Blind Box ở chế độ Balanced."
+    "funFact": "You have completed the Economics Blind Box experience in Balanced mode."
   }
 ]

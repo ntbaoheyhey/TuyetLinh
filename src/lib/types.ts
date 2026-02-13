@@ -5,10 +5,22 @@ export interface Track {
   artist: string;
 }
 
-export interface GalleryItem {
-  id: string;
+export interface GalleryMonthItem {
   src: string;
-  caption: string;
+  caption?: string;
+}
+
+export interface GalleryMonth {
+  month: number;
+  title: string;
+  items: GalleryMonthItem[];
+}
+
+export interface ThenNowPair {
+  id: string;
+  thenSrc: string;
+  nowSrc: string;
+  title?: string;
 }
 
 export interface BoxItem {
@@ -24,9 +36,4 @@ export interface MessageCard {
   title: string;
   detail?: string[];
   funFact?: string;
-}
-
-export interface ProgressState {
-  completedBoxes: string[];
-  earnedBadges: string[];
 }

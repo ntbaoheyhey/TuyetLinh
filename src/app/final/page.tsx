@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import PageFrame from "@/components/page-frame";
 import { useAppState } from "@/components/app-provider";
@@ -14,23 +15,27 @@ export default function FinalPage() {
   const finalCard = messages.find((m) => m.boxId === "final");
 
   return (
-    <PageFrame title="Final Letter" backHref="/album">
+    <PageFrame backHref="/boxes">
+      <h2>Final Letter</h2>
       {allCompleted ? (
-        <div>
+        <div className="stack">
           <h3>{finalCard?.title}</h3>
           {finalCard?.detail?.map((d) => <p key={d}>{d}</p>)}
-          <button
-            className="btn"
-            onClick={() => {
-              resetProgress();
-              router.push("/boxes");
-            }}
-          >
-            Reset Progress
-          </button>
+          <div className="row">
+            <Link className="btn btn-primary" href="/feedback">Send feedback</Link>
+            <button
+              className="btn"
+              onClick={() => {
+                resetProgress();
+                router.push("/boxes");
+              }}
+            >
+              Reset Progress
+            </button>
+          </div>
         </div>
       ) : (
-        <p>Final Letter đang khóa. Hoàn thành đủ 5 boxes trước nhé.</p>
+        <p>Final Letter is locked. Please complete all 5 boxes first.</p>
       )}
     </PageFrame>
   );

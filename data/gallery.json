@@ -1,5 +1,14 @@
 [
-  { "id": "p01", "src": "/photos/polaroids/p01.jpg", "caption": "Khoảnh khắc đầu tiên của hành trình." },
-  { "id": "p02", "src": "/photos/polaroids/p02.jpg", "caption": "Một ngày bình thường nhưng rất đáng nhớ." },
-  { "id": "p03", "src": "/photos/polaroids/p03.jpg", "caption": "Bức ảnh này luôn làm mình mỉm cười." }
+  { "month": 1, "title": "January", "items": [{ "src": "/photos/polaroids/p01.jpg", "caption": "A gentle beginning" }] },
+  { "month": 2, "title": "February", "items": [{ "src": "/photos/polaroids/p02.jpg", "caption": "A small bright day" }] },
+  { "month": 3, "title": "March", "items": [{ "src": "/photos/polaroids/p03.jpg", "caption": "A warm memory" }] },
+  { "month": 4, "title": "April", "items": [{ "src": "/photos/polaroids/p01.jpg", "caption": "New little moments" }] },
+  { "month": 5, "title": "May", "items": [{ "src": "/photos/polaroids/p02.jpg", "caption": "Soft spring light" }] },
+  { "month": 6, "title": "June", "items": [{ "src": "/photos/polaroids/p03.jpg", "caption": "Half-year smile" }] },
+  { "month": 7, "title": "July", "items": [{ "src": "/photos/polaroids/p01.jpg", "caption": "Summer pause" }] },
+  { "month": 8, "title": "August", "items": [{ "src": "/photos/polaroids/p02.jpg", "caption": "Quiet joy" }] },
+  { "month": 9, "title": "September", "items": [{ "src": "/photos/polaroids/p03.jpg", "caption": "Back to balance" }] },
+  { "month": 10, "title": "October", "items": [{ "src": "/photos/polaroids/p01.jpg", "caption": "Golden mood" }] },
+  { "month": 11, "title": "November", "items": [{ "src": "/photos/polaroids/p02.jpg", "caption": "Cozy season" }] },
+  { "month": 12, "title": "December", "items": [{ "src": "/photos/polaroids/p03.jpg", "caption": "Year-end gratitude" }] }
 ]

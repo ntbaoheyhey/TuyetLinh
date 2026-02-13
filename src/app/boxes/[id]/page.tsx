@@ -17,7 +17,8 @@ export default function BoxGamePage({ params }: { params: { id: string } }) {
   }
 
   return (
-    <PageFrame title={`Box ${id}`} backHref="/boxes" nextHref="/boxes">
+    <PageFrame backHref="/boxes" nextHref="/boxes">
+      <h2>Box {id}</h2>
       {id === 1 && <Box1Game onDone={done} />}
       {id === 4 && <Box4Game onDone={done} />}
       {id !== 1 && id !== 4 && <StubGame title={`Box ${id}`} onDone={done} />}

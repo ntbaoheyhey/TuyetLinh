@@ -4,7 +4,7 @@ import { createContext, useContext, useEffect, useMemo, useRef, useState } from 
 import { usePathname } from "next/navigation";
 import playlistData from "../../data/playlist.json";
 import boxesData from "../../data/boxes.json";
-import type { ProgressState, Track } from "@/lib/types";
+import type { Track } from "@/lib/types";
 
 const playlist = playlistData as Track[];
 const totalBoxes = boxesData.length;
@@ -87,6 +87,8 @@ export default function AppProvider({ children }: { children: React.ReactNode })
     setEarnedBadges([]);
     localStorage.removeItem("completedBoxes");
     localStorage.removeItem("earnedBadges");
+    localStorage.removeItem("giftFeedback");
+    localStorage.removeItem("giftFeedbackTimestamp");
   }
 
   function openGift() {
