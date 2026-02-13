@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import PageFrame from "@/components/page-frame";
+import MonthPoster from "@/components/month-poster";
 import galleryData from "../../../data/gallery.json";
 import type { GalleryMonth } from "@/lib/types";
 
@@ -19,7 +20,7 @@ export default function GalleryPage() {
           }
         });
       },
-      { threshold: 0.16, rootMargin: "0px 0px -5% 0px" },
+      { threshold: 0.15, rootMargin: "0px 0px -6% 0px" },
     );
 
     targets.forEach((el) => observer.observe(el));
@@ -29,18 +30,8 @@ export default function GalleryPage() {
   return (
     <PageFrame backHref="/" nextHref="/then-now">
       <div className="month-list">
-        {gallery.map((month) => (
-          <section key={month.month} className="month-section reveal">
-            <h2>{month.title}</h2>
-            <div className="portfolio-grid">
-              {month.items.map((item, idx) => (
-                <article key={`${month.month}-${idx}`} className="portfolio-item reveal" style={{ transitionDelay: `${idx * 45}ms` }}>
-                  <div className="photo-placeholder large">{item.src}</div>
-                  {item.caption && <p className="small">{item.caption}</p>}
-                </article>
-              ))}
-            </div>
-          </section>
+        {gallery.map((month, idx) => (
+          <MonthPoster key={month.month} month={month} delayBase={idx * 30} />
         ))}
       </div>
     </PageFrame>

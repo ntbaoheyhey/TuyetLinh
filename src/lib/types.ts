@@ -5,15 +5,19 @@ export interface Track {
   artist: string;
 }
 
-export interface GalleryMonthItem {
+export type NotePlacement = "top" | "bottom" | "left" | "right";
+
+export interface GalleryPosterItem {
   src: string;
-  caption?: string;
+  note?: string;
+  notePlacement?: NotePlacement;
 }
 
 export interface GalleryMonth {
   month: number;
   title: string;
-  items: GalleryMonthItem[];
+  layout: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L";
+  items: GalleryPosterItem[];
 }
 
 export interface ThenNowPair {

@@ -37,6 +37,7 @@ export default function AppProvider({ children }: { children: React.ReactNode })
   const [started, setStarted] = useState(false);
   const [musicIndex, setMusicIndex] = useState(0);
   const [soundOn, setSoundOn] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     const completedRaw = localStorage.getItem("completedBoxes");
@@ -49,7 +50,11 @@ export default function AppProvider({ children }: { children: React.ReactNode })
     if (badgesRaw) setEarnedBadges(JSON.parse(badgesRaw));
     if (musicRaw) setMusicIndex(Number(musicRaw));
     if (soundRaw) setSoundOn(soundRaw === "true");
-    if (startedRaw) setStarted(startedRaw === "true");
+    if (startedRaw) {
+      const wasStarted = startedRaw === "true";
+      setStarted(wasStarted);
+      setIsPlaying(wasStarted);
+    }
 
     localStorage.removeItem("mbtiPreset");
     localStorage.removeItem("openedBoxes");
@@ -93,19 +98,25 @@ export default function AppProvider({ children }: { children: React.ReactNode })
 
   function openGift() {
     setStarted(true);
-    setTimeout(() => audioRef.current?.play().catch(() => null), 0);
+    setTimeout(() => {
+      audioRef.current?.play().then(() => setIsPlaying(true)).catch(() => null);
+    }, 0);
   }
 
   function togglePlay() {
     if (!audioRef.current || !started) return;
-    if (audioRef.current.paused) audioRef.current.play().catch(() => null);
-    else audioRef.current.pause();
+    if (audioRef.current.paused) {
+      audioRef.current.play().then(() => setIsPlaying(true)).catch(() => null);
+    } else {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    }
   }
 
   function nextTrack() {
     const next = (musicIndex + 1) % playlist.length;
     setMusicIndex(next);
-    if (started) setTimeout(() => audioRef.current?.play().catch(() => null), 50);
+    if (started) setTimeout(() => audioRef.current?.play().then(() => setIsPlaying(true)).catch(() => null), 50);
   }
 
   const value = useMemo(
@@ -128,9 +139,9 @@ export default function AppProvider({ children }: { children: React.ReactNode })
       {started && (
         <div className="music-bar">
           <span>{playlist[musicIndex]?.title}</span>
-          <button onClick={togglePlay}>Play/Pause</button>
-          <button onClick={nextTrack}>Next</button>
-          <button onClick={() => setSoundOn((v) => !v)}>{soundOn ? "Sound On" : "Muted"}</button>
+          <button className="icon-btn" aria-label={isPlaying ? "Pause" : "Play"} onClick={togglePlay}>{isPlaying ? "⏸" : "▶"}</button>
+          <button className="icon-btn" aria-label="Next track" onClick={nextTrack}>⏭</button>
+          <button className="icon-btn" aria-label={soundOn ? "Mute" : "Unmute"} onClick={() => setSoundOn((v) => !v)}>{soundOn ? "🔊" : "🔇"}</button>
         </div>
       )}
       <div key={pathname} className="page-transition">

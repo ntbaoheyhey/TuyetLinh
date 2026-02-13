@@ -37,12 +37,12 @@ export default function ThenNowPage() {
 
       <div className="row pair-controls">
         <span className="small">{indicator}</span>
-        <button className="btn" onClick={() => setIndex((v) => Math.max(0, v - 1))} disabled={index === 0}>
-          Previous Pair
+        <button className="btn icon-btn" aria-label="Previous pair" onClick={() => setIndex((v) => Math.max(0, v - 1))} disabled={index === 0}>
+          ←
         </button>
         {!isLast && (
-          <button className="btn" onClick={() => setIndex((v) => Math.min(pairs.length - 1, v + 1))} disabled={!canNextPair}>
-            Next Pair
+          <button className="btn icon-btn" aria-label="Next pair" onClick={() => setIndex((v) => Math.min(pairs.length - 1, v + 1))} disabled={!canNextPair}>
+            →
           </button>
         )}
         {isLast && (
