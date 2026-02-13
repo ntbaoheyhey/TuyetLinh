@@ -22,8 +22,8 @@ export default function PageFrame({
   return (
     <main className="shell">
       <header className="compact-header">
-        <span className="step-label">Step {index + 1}/{steps.length}</span>
-        <div className="progress-track compact">
+        <span className="sr-only">Progress {(index + 1)} of {steps.length}</span>
+        <div className="progress-track compact" aria-hidden="true">
           <div className="progress-fill" style={{ width: `${((index + 1) / steps.length) * 100}%` }} />
         </div>
       </header>
